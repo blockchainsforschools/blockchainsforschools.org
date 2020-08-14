@@ -1,0 +1,7 @@
+restylers:
+  - name: prettier
+    include:
+      - "**/*.js"
+      - "**/*.ts"
+      - "**/*.jsx"
+      - "**/*.tsx"

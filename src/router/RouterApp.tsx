@@ -6,13 +6,11 @@ import { NavBar, Footer } from '../components/layout';
 
 const RouterApp: React.FC = () => {
 	return (
-		<div>
-			<BrowserRouter>
-				<NavBar />
-				<RouterSwitch />
-				<Footer />
-			</BrowserRouter>
-		</div>
+		<BrowserRouter>
+			<NavBar />
+			<RouterSwitch />
+			<Footer />
+		</BrowserRouter>
 	);
 };
 

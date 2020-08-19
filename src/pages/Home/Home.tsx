@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { Hero } from '../../components';
+import { Hero, Content } from '../../components';
+
 
 const Home: React.FC = () => {
 	return (
 		<div>
 			<Hero />
+			<Content />
 		</div>
 	);
 };

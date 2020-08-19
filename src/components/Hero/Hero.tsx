@@ -35,7 +35,7 @@ const useStyles = makeStyles({
 		color: 'white',
 		justifyContent: 'left',
 		width: '80%',
-		height: '100%',
+		height: 'initial%',
 		zIndex: 2
 	},
 	heroTextBox: {

@@ -5,11 +5,15 @@ import {
 	Toolbar,
 	Typography,
 	IconButton,
-	Button
+	Button,
+	Theme
 } from '@material-ui/core';
 import { Search, MoreVert, AccountCircleOutlined } from '@material-ui/icons';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme: Theme) => ({
+	root: {
+		flexGrow: 1
+	},
 	navBar: {
 		backgroundColor: 'white',
 		boxShadow: 'none',
@@ -17,9 +21,12 @@ const useStyles = makeStyles({
 		color: '#6fc38f'
 	},
 	navBarItem: {
-		flexGrow: 2,
 		color: 'inherit',
-		textTransform: 'none'
+		textTransform: 'none',
+		padding: 'inherit 10px'
+	},
+	navBarFiller: {
+		flexGrow: 1
 	},
 	searchIconButton: {
 		color: 'inherit'
@@ -30,7 +37,7 @@ const useStyles = makeStyles({
 	accountCircleOutlinedIconButton: {
 		color: 'inherit'
 	}
-});
+}));
 
 const NavBar: React.FC = () => {
 	const classes = useStyles();
@@ -39,9 +46,7 @@ const NavBar: React.FC = () => {
 		<AppBar className={classes.navBar}>
 			<Toolbar>
 				<Button className={classes.navBarItem}>
-					<Typography variant="h6" style={{ marginLeft: '5%' }}>
-						Home
-					</Typography>
+					<Typography variant="h6">Home</Typography>
 				</Button>
 				<Button className={classes.navBarItem}>
 					<Typography variant="h6">Hackathon</Typography>
@@ -58,13 +63,17 @@ const NavBar: React.FC = () => {
 				<Button className={classes.navBarItem}>
 					<Typography variant="h6">Programs</Typography>
 				</Button>
-				<IconButton className={classes.searchIconButton}>
+				<div className={classes.navBarFiller} />
+				<IconButton edge="end" className={classes.searchIconButton}>
 					<Search />
 				</IconButton>
-				<IconButton className={classes.moreVertIconButton}>
+				<IconButton edge="end" className={classes.moreVertIconButton}>
 					<MoreVert />
 				</IconButton>
-				<IconButton className={classes.accountCircleOutlinedIconButton}>
+				<IconButton
+					edge="end"
+					className={classes.accountCircleOutlinedIconButton}
+				>
 					<AccountCircleOutlined />
 				</IconButton>
 			</Toolbar>

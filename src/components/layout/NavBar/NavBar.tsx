@@ -46,7 +46,9 @@ const NavBar: React.FC = () => {
 		<AppBar className={classes.navBar}>
 			<Toolbar>
 				<Button className={classes.navBarItem}>
-					<Typography variant="h6">Home</Typography>
+					<Typography variant="h6" style={{ fontWeight: 'bold' }}>
+						Home
+					</Typography>
 				</Button>
 				<Button className={classes.navBarItem}>
 					<Typography variant="h6">Hackathon</Typography>

@@ -4,27 +4,31 @@ import {
 	AppBar,
 	Toolbar,
 	Typography,
-	IconButton
+	IconButton,
+	Button
 } from '@material-ui/core';
 import { Search, MoreVert, AccountCircleOutlined } from '@material-ui/icons';
 
 const useStyles = makeStyles({
 	navBar: {
 		backgroundColor: 'white',
-		boxShadow: 'none'
+		boxShadow: 'none',
+		position: 'sticky',
+		color: '#6fc38f'
 	},
 	navBarItem: {
-		color: '#6fc38f',
-		flexGrow: 2
+		flexGrow: 2,
+		color: 'inherit',
+		textTransform: 'none'
 	},
 	searchIconButton: {
-		color: '#6fc38f'
+		color: 'inherit'
 	},
 	moreVertIconButton: {
-		color: '#6fc38f'
+		color: 'inherit'
 	},
 	accountCircleOutlinedIconButton: {
-		color: '#6fc38f'
+		color: 'inherit'
 	}
 });
 
@@ -34,24 +38,26 @@ const NavBar: React.FC = () => {
 	return (
 		<AppBar className={classes.navBar}>
 			<Toolbar>
-				<Typography variant="h6" className={classes.navBarItem}>
-					Home
-				</Typography>
-				<Typography variant="h6" className={classes.navBarItem}>
-					Hackathon
-				</Typography>
-				<Typography variant="h6" className={classes.navBarItem}>
-					Mentorship
-				</Typography>
-				<Typography variant="h6" className={classes.navBarItem}>
-					Summer
-				</Typography>
-				<Typography variant="h6" className={classes.navBarItem}>
-					Team
-				</Typography>
-				<Typography variant="h6" className={classes.navBarItem}>
-					Programs
-				</Typography>
+				<Button className={classes.navBarItem}>
+					<Typography variant="h6" style={{ marginLeft: '5%' }}>
+						Home
+					</Typography>
+				</Button>
+				<Button className={classes.navBarItem}>
+					<Typography variant="h6">Hackathon</Typography>
+				</Button>
+				<Button className={classes.navBarItem}>
+					<Typography variant="h6">Mentorship</Typography>
+				</Button>
+				<Button className={classes.navBarItem}>
+					<Typography variant="h6">Summer</Typography>
+				</Button>
+				<Button className={classes.navBarItem}>
+					<Typography variant="h6">Team</Typography>
+				</Button>
+				<Button className={classes.navBarItem}>
+					<Typography variant="h6">Programs</Typography>
+				</Button>
 				<IconButton className={classes.searchIconButton}>
 					<Search />
 				</IconButton>

@@ -31,12 +31,15 @@ const useStyles = makeStyles({
 	heroText: {
 		position: 'absolute',
 		top: '40%',
-		left: '5%',
+		left: '6%',
 		color: 'white',
 		justifyContent: 'left',
 		width: '80%',
 		height: '100%',
 		zIndex: 2
+	},
+	heroTextBox: {
+		position: 'relative'
 	},
 	heroTitle: { fontWeight: 700 },
 	heroSubtitle: { width: 'inherit' },
@@ -49,13 +52,15 @@ const useStyles = makeStyles({
 		top: '0px',
 		left: '0px',
 		background: 'rgba(0, 0, 0, 0.5)'
+	},
+	greenRectangle: {
+		width: '10px',
+		height: '103%',
+		backgroundColor: '#6fc38f',
+		position: 'absolute',
+		top: '0',
+		left: '-3%'
 	}
-	// greenRectangle: {
-	// 	width: '10px',
-	// 	height: '40%',
-	// 	backgroundColor: '#6fc38f',
-	// 	position: 'absolute'
-	// }
 });
 
 const Hero: React.FC = () => {
@@ -67,16 +72,19 @@ const Hero: React.FC = () => {
 				<div className={classes.heroOverlay} />
 			</div>
 			<div className={classes.heroText}>
-				{/* <div className={classes.greenRectangle} /> */}
-				<Typography variant="h3" className={classes.heroTitle}>
-					BLOCKCHAINS FOR SCHOOLS
-				</Typography>
-				<Typography variant="h5" className={classes.heroSubtitle}>
-					a 501(c)(3) nonprofit aimed at connecting students with the
-					blockchain industry. To that end we run a mentoring program,
-					a summer internship program, and a hackathon. We also host
-					series of workshops with companies all across NYC.
-				</Typography>
+				<div className={classes.heroTextBox}>
+					<div className={classes.greenRectangle} />
+					<Typography variant="h3" className={classes.heroTitle}>
+						BLOCKCHAINS FOR SCHOOLS
+					</Typography>
+					<Typography variant="h5" className={classes.heroSubtitle}>
+						a 501(c)(3) nonprofit aimed at connecting students with
+						the blockchain industry. To that end we run a mentoring
+						program, a summer internship program, and a hackathon.
+						We also host series of workshops with companies all
+						across NYC.
+					</Typography>
+				</div>
 			</div>
 		</div>
 	);

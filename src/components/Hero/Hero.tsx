@@ -5,13 +5,15 @@ import HeroImage from '../../assets/images/coding.jpg';
 
 const useStyles = makeStyles({
 	hero: {
-		height: '100%',
-		position: 'relative'
-	},
-	heroImage: {
 		width: '100vw',
 		maxWidth: '100%',
 		height: '80vh',
+		position: 'relative',
+		background: 'rgba(0, 0, 0, 0.5)'
+	},
+	heroImage: {
+		height: 'inherit',
+		width: '100%',
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
@@ -23,8 +25,8 @@ const useStyles = makeStyles({
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
 		backgroundAttachment: 'fixed',
-		filter: 'blur(5px)',
-		WebkitFilter: 'blur(5px)'
+		filter: 'blur(4px)',
+		WebkitFilter: 'blur(4px)'
 	},
 	heroText: {
 		position: 'absolute',
@@ -33,10 +35,21 @@ const useStyles = makeStyles({
 		color: 'white',
 		justifyContent: 'left',
 		width: '80%',
-		height: '100%'
+		height: '100%',
+		zIndex: 2
 	},
 	heroTitle: { fontWeight: 700 },
-	heroSubtitle: { width: 'inherit' }
+	heroSubtitle: { width: 'inherit' },
+	heroOverlay: {
+		zIndex: 1,
+		height: 'inherit',
+		width: 'inherit',
+		position: 'fixed',
+		overflow: 'hidden',
+		top: '0px',
+		left: '0px',
+		background: 'rgba(0, 0, 0, 0.5)'
+	}
 	// greenRectangle: {
 	// 	width: '10px',
 	// 	height: '40%',
@@ -50,7 +63,9 @@ const Hero: React.FC = () => {
 
 	return (
 		<div className={classes.hero}>
-			<div className={classes.heroImage} />
+			<div className={classes.heroImage}>
+				<div className={classes.heroOverlay} />
+			</div>
 			<div className={classes.heroText}>
 				{/* <div className={classes.greenRectangle} /> */}
 				<Typography variant="h3" className={classes.heroTitle}>

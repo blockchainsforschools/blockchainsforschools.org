@@ -5,12 +5,11 @@ import {
 	Toolbar,
 	Typography,
 	IconButton,
-	Button,
-	Theme
+	Button
 } from '@material-ui/core';
 import { Search, MoreVert, AccountCircleOutlined } from '@material-ui/icons';
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles({
 	root: {
 		flexGrow: 1
 	},
@@ -37,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 	accountCircleOutlinedIconButton: {
 		color: 'inherit'
 	}
-}));
+});
 
 const NavBar: React.FC = () => {
 	const classes = useStyles();

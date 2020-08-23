@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-	makeStyles,
-	AppBar,
-	Toolbar,
-	Typography,
-	IconButton,
-	Button,
-	Theme
-} from '@material-ui/core';
+import { makeStyles, IconButton, Theme } from '@material-ui/core';
 
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -26,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		textAlign: 'center',
 		padding: '35px',
 		/* alignItems: 'center', */
-		justifyContent: 'center',
+		justifyContent: 'center'
 	},
 	circle: {
 		display: 'flex',
@@ -35,17 +27,16 @@ const useStyles = makeStyles((theme: Theme) => ({
 		backgroundColor: 'white',
 		borderRadius: '50%',
 		height: '45px',
-		width: '45px',
+		width: '45px'
 	},
 	iconContainer: {
 		width: '35vw',
 		height: '75px',
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent : 'space-evenly',
+		justifyContent: 'space-evenly'
 	}
 }));
-
 
 const Footer: React.FC = () => {
 	const classes = useStyles();
@@ -53,19 +44,34 @@ const Footer: React.FC = () => {
 		<div className={classes.footer}>
 			<div className={classes.iconContainer}>
 				<div className={classes.circle}>
-					<IconButton> <InstagramIcon /> </IconButton>
+					<IconButton>
+						{' '}
+						<InstagramIcon />{' '}
+					</IconButton>
 				</div>
 				<div className={classes.circle}>
-					<IconButton> <FacebookIcon /> </IconButton>
+					<IconButton>
+						{' '}
+						<FacebookIcon />{' '}
+					</IconButton>
 				</div>
 				<div className={classes.circle}>
-					<IconButton> <EmailIcon /> </IconButton>
+					<IconButton>
+						{' '}
+						<EmailIcon />{' '}
+					</IconButton>
 				</div>
 				<div className={classes.circle}>
-					<IconButton> <LinkedInIcon /> </IconButton>
+					<IconButton>
+						{' '}
+						<LinkedInIcon />{' '}
+					</IconButton>
 				</div>
 				<div className={classes.circle}>
-					<IconButton> <TwitterIcon /> </IconButton>
+					<IconButton>
+						{' '}
+						<TwitterIcon />{' '}
+					</IconButton>
 				</div>
 			</div>
 		</div>

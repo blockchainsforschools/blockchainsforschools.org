@@ -17,7 +17,7 @@ const SponsorCell: React.FC<SponsorCellProps> = props => {
 	const classes = useStyles();
 
 	return (
-		<Grid item spacing={7}>
+		<Grid item>
 			<img
 				src={src}
 				alt={alt}

@@ -11,7 +11,10 @@ const useStyles = makeStyles({
 		width: '100%',
 		margin: 0
 	},
-
+	contentWrapper: {
+		padding: '16px',
+		Height: 'initial'
+	},
 	itemTitle: {
 		fontWeight: 500,
 		color: '#6fc38f',
@@ -32,7 +35,7 @@ const useStyles = makeStyles({
 		backgroundColor: 'gray',
 		borderRadius: '8px',
 		height: '37vh',
-		width: '45vw'
+		width: '100%'
 	}
 });
 
@@ -82,14 +85,14 @@ const Content: React.FC = () => {
 	return (
 		<Grid
 			container
-			spacing={4}
+			spacing={0}
 			justify="center"
 			className={classes.wrapper}
 		>
 			{items.map(item => (
 				<Grid item xs={12} sm={6} key={item.key}>
 					{item.type === true ? (
-						<div>
+						<div className={classes.contentWrapper}>
 							<Typography
 								variant="h5"
 								className={classes.itemTitle}
@@ -110,7 +113,7 @@ const Content: React.FC = () => {
 							</Button>
 						</div>
 					) : (
-						<div>
+						<div className={classes.contentWrapper}>
 							<div className={classes.imagePlaceholder}></div>
 						</div>
 					)}

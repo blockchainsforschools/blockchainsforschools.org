@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme: Theme) => ({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'space-evenly'
+	},
+	icon: {
+		color: '#6fc38f',
 	}
 }));
 
@@ -46,31 +49,31 @@ const Footer: React.FC = () => {
 				<div className={classes.circle}>
 					<IconButton>
 						{' '}
-						<InstagramIcon />{' '}
+						<InstagramIcon className={classes.icon} />{' '}
 					</IconButton>
 				</div>
 				<div className={classes.circle}>
 					<IconButton>
 						{' '}
-						<FacebookIcon />{' '}
+						<FacebookIcon className={classes.icon} />{' '}
 					</IconButton>
 				</div>
 				<div className={classes.circle}>
 					<IconButton>
 						{' '}
-						<EmailIcon />{' '}
+						<EmailIcon className={classes.icon} />{' '}
 					</IconButton>
 				</div>
 				<div className={classes.circle}>
 					<IconButton>
 						{' '}
-						<LinkedInIcon />{' '}
+						<LinkedInIcon className={classes.icon} />{' '}
 					</IconButton>
 				</div>
 				<div className={classes.circle}>
 					<IconButton>
 						{' '}
-						<TwitterIcon />{' '}
+						<TwitterIcon className={classes.icon} />{' '}
 					</IconButton>
 				</div>
 			</div>

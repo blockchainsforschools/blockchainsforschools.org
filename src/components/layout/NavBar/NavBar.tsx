@@ -10,7 +10,6 @@ import {
 import { Search, MoreVert, AccountCircleOutlined } from '@material-ui/icons';
 
 const useStyles = makeStyles({
-
 	root: {
 		flexGrow: 1
 	},
@@ -38,7 +37,6 @@ const useStyles = makeStyles({
 		color: 'inherit'
 	}
 });
-
 
 const NavBar: React.FC = () => {
 	const classes = useStyles();

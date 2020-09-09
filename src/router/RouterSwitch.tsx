@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 
-import { Home } from '../pages';
+import { Home, Team} from '../pages';
 
 const RouterSwitch: React.FC = () => {
 	const location = useLocation();
@@ -9,6 +9,9 @@ const RouterSwitch: React.FC = () => {
 		<Switch location={location}>
 			<Route path="/" exact>
 				<Home />
+			</Route>
+			<Route path="/team" exact>
+				<Team />
 			</Route>
 		</Switch>
 	);

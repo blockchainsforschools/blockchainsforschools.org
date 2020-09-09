@@ -47,7 +47,7 @@ const items = [
 		title: 'Blockchains4Hacks 2020',
 		text:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Commodo nulla facilisi nullam vehicula ipsum. Ut sem viverra aliquet eget sit. Pulvinar sapien et ligula ullamcorper malesuada proin libero. Morbi leo urna molestie at elementum eu facilisis sed odio. Sem integer vitae justo eget.',
-		button: 'Hackathon!'
+		button: 'Hackathon'
 	},
 	{
 		key: 1,
@@ -63,7 +63,7 @@ const items = [
 		title: 'Mentorship Program',
 		text:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Commodo nulla facilisi nullam vehicula ipsum. Ut sem viverra aliquet eget sit. Pulvinar sapien et ligula ullamcorper malesuada proin libero. Morbi leo urna molestie at elementum eu facilisis sed odio. Sem integer vitae justo eget.',
-		button: 'Mentorship!'
+		button: 'Mentorship'
 	},
 	{
 		key: 4,
@@ -71,7 +71,7 @@ const items = [
 		title: 'Summer Immersion',
 		text:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Commodo nulla facilisi nullam vehicula ipsum. Ut sem viverra aliquet eget sit. Pulvinar sapien et ligula ullamcorper malesuada proin libero. Morbi leo urna molestie at elementum eu facilisis sed odio. Sem integer vitae justo eget.',
-		button: 'Summer!'
+		button: 'Summer'
 	},
 	{
 		key: 5,

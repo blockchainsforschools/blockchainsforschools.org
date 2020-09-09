@@ -8,6 +8,7 @@ import {
 	Button
 } from '@material-ui/core';
 import { Search, MoreVert, AccountCircleOutlined } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
 	root: {
@@ -44,7 +45,7 @@ const NavBar: React.FC = () => {
 	return (
 		<AppBar className={classes.navBar}>
 			<Toolbar>
-				<Button className={classes.navBarItem}>
+				<Button component={Link} to="/" className={classes.navBarItem}>
 					<Typography variant="h6" style={{ fontWeight: 'bold' }}>
 						Home
 					</Typography>
@@ -58,7 +59,7 @@ const NavBar: React.FC = () => {
 				<Button className={classes.navBarItem}>
 					<Typography variant="h6">Summer</Typography>
 				</Button>
-				<Button className={classes.navBarItem}>
+				<Button component={Link} to="/Team" className={classes.navBarItem}>
 					<Typography variant="h6">Team</Typography>
 				</Button>
 				<Button className={classes.navBarItem}>

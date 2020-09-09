@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { makeStyles, Typography} from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
 	container: {
@@ -9,19 +9,19 @@ const useStyles = makeStyles({
 		display: 'flex',
 		justifyContent: 'center',
 		alignContent: 'center',
-		flexWrap: 'wrap',
+		flexWrap: 'wrap'
 	},
 
 	item: {
 		width: '100vw',
-		textAlign: 'center',
+		textAlign: 'center'
 	},
 
 	itemTitle: {
 		fontSize: '72px',
 		fontWeight: 500,
 		color: '#6fc38f',
-		marginBottom: '8px',
+		marginBottom: '8px'
 	},
 
 	itemSubTitle: {
@@ -29,29 +29,30 @@ const useStyles = makeStyles({
 		fontSize: '20px',
 		fontWeight: 400,
 		color: 'gray',
-		marginBottom: '8px',
-	},
+		marginBottom: '8px'
+	}
 });
 
-const Banner: React.FC<{title:string, subtitle:string}> = ({children, title, subtitle}) => {
-    const classes = useStyles();
+const Banner: React.FC<{ title: string; subtitle: string }> = ({
+	children,
+	title,
+	subtitle
+}) => {
+	const classes = useStyles();
 	return (
 		<div className={classes.container}>
 			<div className={classes.item}>
-				<Typography
-					variant="h1"
-					className={classes.itemTitle}
-				>
-					{title} 
+				<Typography variant="h1" className={classes.itemTitle}>
+					{title}
 				</Typography>
 			</div>
 			<div className={classes.item}>
 				<Typography
 					variant="body1"
 					className={classes.itemSubTitle}
-					style={{ margin: "auto" }}
+					style={{ margin: 'auto' }}
 				>
-					{subtitle} 
+					{subtitle}
 				</Typography>
 			</div>
 		</div>

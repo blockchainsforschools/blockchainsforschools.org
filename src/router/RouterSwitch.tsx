@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 
-import { Home, Team} from '../pages';
+import { Home, Team } from '../pages';
 
 const RouterSwitch: React.FC = () => {
 	const location = useLocation();

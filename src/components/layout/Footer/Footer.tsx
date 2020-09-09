@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		justifyContent: 'space-evenly'
 	},
 	icon: {
-		color: '#6fc38f',
+		color: '#6fc38f'
 	}
 }));
 

@@ -59,7 +59,7 @@ const NavBar: React.FC = () => {
 				<Button className={classes.navBarItem}>
 					<Typography variant="h6">Summer</Typography>
 				</Button>
-				<Button component={Link} to="/Team" className={classes.navBarItem}>
+				<Button component={Link} to="/team" className={classes.navBarItem}>
 					<Typography variant="h6">Team</Typography>
 				</Button>
 				<Button className={classes.navBarItem}>

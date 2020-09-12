@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, AppBar, Toolbar, Typography } from '@material-ui/core';
 
 import HackBFS from '../../../assets/images/hackBFS.png';
-import NavMenu from './NavMenu';
+import { NavMenu } from '../../../containers';
 
 const useStyles = makeStyles({
 	root: { flexGrow: 1 },

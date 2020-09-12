@@ -2,11 +2,11 @@ import { Footer, NavBar } from './layout';
 import { Content, Hero, Sponsors } from './Home';
 import {
 	Banner,
-	Content as TeamContent,
 	DropDown,
 	SideBar,
 	Executives,
-	Hackathon
+	Hackathon,
+	TeamContent
 } from './Team';
 
 export {

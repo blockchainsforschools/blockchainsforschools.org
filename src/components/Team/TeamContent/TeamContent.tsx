@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     },
 });
 
-const Content: React.FC = () => {
+const TeamContent: React.FC = () => {
 	const location = useLocation();
 	const classes = useStyles();
 	return (
@@ -29,4 +29,4 @@ const Content: React.FC = () => {
 	);
 };
 
-export default Content;
+export default TeamContent;

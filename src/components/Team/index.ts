@@ -1,7 +1,7 @@
 import Banner from './Banner';
-import Content from './Content';
+import TeamContent from './TeamContent';
 import DropDown from './DropDown';
 import SideBar from './SideBar';
 import { Executives, Hackathon } from './Teams';
 
-export { Banner, Content, DropDown, SideBar, Executives, Hackathon };
+export { Banner, TeamContent, DropDown, SideBar, Executives, Hackathon };

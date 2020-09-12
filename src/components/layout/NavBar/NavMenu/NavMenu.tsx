@@ -1,5 +1,14 @@
-import React from 'react';
-import { makeStyles, Typography, IconButton, Button } from '@material-ui/core';
+import React, { useState } from 'react';
+import {
+	makeStyles,
+	Typography,
+	IconButton,
+	Button,
+	Drawer,
+	List,
+	ListItem,
+	ListItemText
+} from '@material-ui/core';
 import {
 	Search,
 	MoreVert,
@@ -49,6 +58,12 @@ const useStyles = makeStyles({
 const NavMenu: React.FC = () => {
 	const classes = useStyles();
 
+	const [open, setOpen] = useState(false);
+
+	const toggleDrawer = () => {
+		setOpen(!open);
+	};
+
 	return (
 		<>
 			<div className={classes.navMenu}>
@@ -93,10 +108,41 @@ const NavMenu: React.FC = () => {
 				</IconButton>
 			</div>
 			<span className={classes.BurgerMenu}>
-				<IconButton edge="end" className={classes.BurgerMenuButton}>
+				<IconButton
+					edge="end"
+					className={classes.BurgerMenuButton}
+					onClick={toggleDrawer}
+				>
 					<Menu />
 				</IconButton>
 			</span>
+			<Drawer
+				variant="temporary"
+				anchor="top"
+				open={open}
+				onClose={() => setOpen(false)}
+			>
+				<List>
+					<ListItem button>
+						<ListItemText>Home</ListItemText>
+					</ListItem>
+					<ListItem button>
+						<ListItemText>Hackathon</ListItemText>
+					</ListItem>
+					<ListItem button>
+						<ListItemText>Mentorship</ListItemText>
+					</ListItem>
+					<ListItem button>
+						<ListItemText>Summer</ListItemText>
+					</ListItem>
+					<ListItem button>
+						<ListItemText>Team</ListItemText>
+					</ListItem>
+					<ListItem button>
+						<ListItemText>Programs</ListItemText>
+					</ListItem>
+				</List>
+			</Drawer>
 		</>
 	);
 };

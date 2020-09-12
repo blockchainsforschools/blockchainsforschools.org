@@ -8,8 +8,9 @@ interface SponsorCellProps {
 
 const useStyles = makeStyles({
 	sponsorCellImage: {
-		margin: '10px 20px',
+		margin: '20px 20px',
 		maxWidth: '160px',
+		height: '100px',
 		objectFit: 'contain'
 	}
 });

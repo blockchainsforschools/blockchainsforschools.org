@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 
-import HeroImage from '../../assets/images/coding.jpg';
+import HeroImage from '../../../assets/images/coding.jpg';
 
 const useStyles = makeStyles({
 	hero: {

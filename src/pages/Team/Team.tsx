@@ -1,8 +1,8 @@
-import React from 'react';
-
-import { Banner, TeamContent, SideBar } from '../../components';
+import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core';
-import { BrowserRouter } from 'react-router-dom';
+
+import { Banner } from '../../components';
+import { TeamContent } from '../../containers';
 
 const useStyles = makeStyles({
 	container: {
@@ -13,8 +13,9 @@ const useStyles = makeStyles({
 
 const Team: React.FC = () => {
 	const classes = useStyles();
+
 	return (
-		<BrowserRouter>
+		<Fragment>
 			<Banner
 				title="Our Team"
 				subtitle={
@@ -22,10 +23,9 @@ const Team: React.FC = () => {
 				}
 			/>
 			<div className={classes.container}>
-				<SideBar />
 				<TeamContent />
 			</div>
-		</BrowserRouter>
+		</Fragment>
 	);
 };
 

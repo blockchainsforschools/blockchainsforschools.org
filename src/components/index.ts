@@ -5,8 +5,8 @@ import {
 	DropDown,
 	SideBar,
 	Executives,
-	Hackathon,
-	TeamContent
+	Hackathon
+	// TeamContent
 } from './Team';
 
 export {
@@ -16,7 +16,7 @@ export {
 	Content,
 	Sponsors,
 	Banner,
-	TeamContent,
+	// TeamContent,
 	DropDown,
 	SideBar,
 	Executives,

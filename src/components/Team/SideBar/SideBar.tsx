@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { makeStyles, Typography, List, ListItem } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
 	container: {
@@ -39,8 +37,13 @@ const useStyles = makeStyles({
 	}
 });
 
-const SideBar: React.FC = () => {
+interface SideBarProps {
+	switchActiveTabHandler: (tab: string) => void;
+}
+
+const SideBar: React.FC<SideBarProps> = ({ switchActiveTabHandler }) => {
 	const classes = useStyles();
+
 	return (
 		<div className={classes.container}>
 			<div className={classes.title}>
@@ -52,8 +55,7 @@ const SideBar: React.FC = () => {
 				<ListItem
 					button
 					className={classes.sideItem}
-					component={Link}
-					to="/team"
+					onClick={() => switchActiveTabHandler('executives')}
 				>
 					<Typography
 						variant="body1"
@@ -65,8 +67,7 @@ const SideBar: React.FC = () => {
 				<ListItem
 					button
 					className={classes.sideItem}
-					component={Link}
-					to="/team/Hackathon"
+					onClick={() => switchActiveTabHandler('hackathon')}
 				>
 					<Typography
 						variant="body1"
@@ -78,8 +79,7 @@ const SideBar: React.FC = () => {
 				<ListItem
 					button
 					className={classes.sideItem}
-					component={Link}
-					to="/team/Mentorship"
+					onClick={() => switchActiveTabHandler('mentorship')}
 				>
 					<Typography
 						variant="body1"
@@ -91,8 +91,7 @@ const SideBar: React.FC = () => {
 				<ListItem
 					button
 					className={classes.sideItem}
-					component={Link}
-					to="/team/Design"
+					onClick={() => switchActiveTabHandler('design')}
 				>
 					<Typography
 						variant="body1"
@@ -104,8 +103,7 @@ const SideBar: React.FC = () => {
 				<ListItem
 					button
 					className={classes.sideItem}
-					component={Link}
-					to="/team/WebDevelopment"
+					onClick={() => switchActiveTabHandler('webDevelopment')}
 				>
 					<Typography
 						variant="body1"
@@ -117,8 +115,7 @@ const SideBar: React.FC = () => {
 				<ListItem
 					button
 					className={classes.sideItem}
-					component={Link}
-					to="/team/Outreach"
+					onClick={() => switchActiveTabHandler('outreach')}
 				>
 					<Typography
 						variant="body1"

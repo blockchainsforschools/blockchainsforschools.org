@@ -91,7 +91,7 @@ const Content: React.FC = () => {
 		>
 			{items.map(item => (
 				<Grid item xs={12} sm={6} key={item.key}>
-					{item.type === true ? (
+					{item.type ? (
 						<div className={classes.contentWrapper}>
 							<Typography
 								variant="h5"

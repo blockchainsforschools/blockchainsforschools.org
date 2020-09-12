@@ -1,41 +1,30 @@
 import React from 'react';
-import {
-	makeStyles,
-	AppBar,
-	Toolbar,
-	Typography,
-	IconButton,
-	Button
-} from '@material-ui/core';
-import { Search, MoreVert, AccountCircleOutlined } from '@material-ui/icons';
-import { Link } from 'react-router-dom';
+import { makeStyles, AppBar, Toolbar, Typography } from '@material-ui/core';
+
+import HackBFS from '../../../assets/images/hackBFS.png';
+import NavMenu from './NavMenu';
 
 const useStyles = makeStyles({
-	root: {
-		flexGrow: 1
-	},
+	root: { flexGrow: 1 },
 	navBar: {
 		backgroundColor: 'white',
 		boxShadow: 'none',
 		position: 'sticky',
 		color: '#6fc38f'
 	},
-	navBarItem: {
-		color: 'inherit',
-		textTransform: 'none',
-		padding: 'inherit 10px'
-	},
 	navBarFiller: {
+		display: 'inline-block',
 		flexGrow: 1
 	},
-	searchIconButton: {
-		color: 'inherit'
+	LogoText: {
+		color: '#4cbb85',
+		fontSize: '1.5rem',
+		font: 'inherit'
 	},
-	moreVertIconButton: {
-		color: 'inherit'
-	},
-	accountCircleOutlinedIconButton: {
-		color: 'inherit'
+	LogoIcon: {
+		height: '64px',
+		display: 'inline',
+		verticalAlign: 'middle'
 	}
 });
 
@@ -43,43 +32,26 @@ const NavBar: React.FC = () => {
 	const classes = useStyles();
 
 	return (
-		<AppBar className={classes.navBar}>
-			<Toolbar>
-				<Button component={Link} to="/" className={classes.navBarItem}>
-					<Typography variant="h6" style={{ fontWeight: 'bold' }}>
-						Home
-					</Typography>
-				</Button>
-				<Button className={classes.navBarItem}>
-					<Typography variant="h6">Hackathon</Typography>
-				</Button>
-				<Button className={classes.navBarItem}>
-					<Typography variant="h6">Mentorship</Typography>
-				</Button>
-				<Button className={classes.navBarItem}>
-					<Typography variant="h6">Summer</Typography>
-				</Button>
-				<Button component={Link} to="/team" className={classes.navBarItem}>
-					<Typography variant="h6">Team</Typography>
-				</Button>
-				<Button className={classes.navBarItem}>
-					<Typography variant="h6">Programs</Typography>
-				</Button>
-				<div className={classes.navBarFiller} />
-				<IconButton edge="end" className={classes.searchIconButton}>
-					<Search />
-				</IconButton>
-				<IconButton edge="end" className={classes.moreVertIconButton}>
-					<MoreVert />
-				</IconButton>
-				<IconButton
-					edge="end"
-					className={classes.accountCircleOutlinedIconButton}
-				>
-					<AccountCircleOutlined />
-				</IconButton>
-			</Toolbar>
-		</AppBar>
+		<div className={classes.root}>
+			<AppBar className={classes.navBar}>
+				<Toolbar>
+					<span className={classes.LogoText}>
+						<img
+							src={HackBFS}
+							alt={'HackBFS'}
+							className={classes.LogoIcon}
+						/>
+						<Typography
+							variant="h6"
+							style={{ display: 'inline-flex' }}
+						>
+							HackBFS
+						</Typography>
+					</span>
+					<NavMenu />
+				</Toolbar>
+			</AppBar>
+		</div>
 	);
 };
 

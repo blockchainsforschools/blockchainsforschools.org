@@ -6,7 +6,7 @@ import {
 } from '@material-ui/core';
 // import { Link } from 'react-router-dom';
 // import { Home, Team} from '../../..';
-import DropDown from '../../DropDown';
+import TeamMemberCard from '../../TeamMemberCard';
 
 const useStyles = makeStyles({
 	container: {
@@ -22,8 +22,7 @@ const Hackathon: React.FC = () => {
 	const classes = useStyles();
 	return (
 		<div className={classes.container}>
-			hi
-			<DropDown />
+			{/* <TeamMemberCard title="Raunak Choudhury | Founder | MIT" /> */}
 		</div>
 	);
 };

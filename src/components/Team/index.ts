@@ -1,13 +1,13 @@
 import Banner from './Banner';
 // import TeamContent from './TeamContent';
-import DropDown from './DropDown';
+import TeamMemberCard from './TeamMemberCard';
 import SideBar from './SideBar';
 import { Executives, Hackathon } from './Teams';
 
 export {
 	Banner,
 	// TeamContent,
-	DropDown,
+	TeamMemberCard,
 	SideBar,
 	Executives,
 	Hackathon

@@ -2,7 +2,7 @@ import { Footer, NavBar } from './layout';
 import { Content, Hero, Sponsors } from './Home';
 import {
 	Banner,
-	DropDown,
+	TeamMemberCard,
 	SideBar,
 	Executives,
 	Hackathon
@@ -17,7 +17,7 @@ export {
 	Sponsors,
 	Banner,
 	// TeamContent,
-	DropDown,
+	TeamMemberCard,
 	SideBar,
 	Executives,
 	Hackathon

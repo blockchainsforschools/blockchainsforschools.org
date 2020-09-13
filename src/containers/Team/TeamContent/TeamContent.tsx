@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { withRouter, useHistory, useLocation } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core';
 
-import { SideBar } from '../../../components';
+import { Executives, Hackathon, SideBar } from '../../../components';
 
 const useStyles = makeStyles({
 	container: {
@@ -34,10 +34,18 @@ const TeamContent: React.FC = () => {
 		setActiveTab(tab);
 	};
 
+	let tabComponent = <Executives />;
+
+	switch (activeTab) {
+		case 'hackathon':
+			tabComponent = <Hackathon />;
+			break;
+	}
+
 	return (
 		<div className={classes.container}>
 			<SideBar switchActiveTabHandler={switchActiveTabHandler} />
-			<p>{activeTab}</p>
+			{tabComponent}
 		</div>
 	);
 };

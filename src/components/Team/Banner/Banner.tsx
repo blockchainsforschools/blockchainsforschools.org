@@ -8,7 +8,7 @@ const useStyles = makeStyles({
 	wrapper: {
 		display: 'flex',
 		justifyContent: 'center',
-		alignItems: 'center',
+		alignItems: 'center'
 	},
 
 	left: {
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 		width: '30%',
 		display: 'flex',
 		justifyContent: 'right',
-		alignItems: 'center',
+		alignItems: 'center'
 	},
 	leftImage: {
 		height: '150px',
@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 		width: '30%',
 		display: 'flex',
 		justifyContent: 'left',
-		alignItems: 'center',
+		alignItems: 'center'
 	},
 	rightImage: {
 		height: '150px',

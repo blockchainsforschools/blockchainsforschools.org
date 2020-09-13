@@ -18,7 +18,8 @@ const useStyles = makeStyles({
 	},
 	LogoText: {
 		color: '#4cbb85',
-		fontSize: '1.5rem',
+		fontSize: '32px',
+		width: '170px',
 		font: 'inherit'
 	},
 	LogoIcon: {
@@ -45,7 +46,7 @@ const NavBar: React.FC = () => {
 							variant="h6"
 							style={{ display: 'inline-flex' }}
 						>
-							HackBFS
+							HackBFS |
 						</Typography>
 					</span>
 					<NavMenu />

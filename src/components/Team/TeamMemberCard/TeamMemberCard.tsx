@@ -18,16 +18,17 @@ import clsx from 'clsx';
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		container: {
-			height: '50px',
+			height: '40px',
 			width: '100%',
 			// backgroundColor: '#6fc38f',
-			marginBottom: '10%',
+			marginBottom: '42px',
 			borderRadius: '10px'
 			// border: '2px solid #6fc38f'
 		},
 		media: {
 			// height: '100%',
-			width: '100px',
+			width: '100%',
+			marginLeft: '24px',
 			// paddingLeft: '56.25%', // 16:9
 			objectFit: 'contain'
 		},

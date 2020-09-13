@@ -1,11 +1,49 @@
 import React from 'react';
 
 import { makeStyles, Typography } from '@material-ui/core';
+import leftImage from '../../../assets/images/teamImage.png';
+import rightImage from '../../../assets/images/bulb.png';
 
 const useStyles = makeStyles({
+	wrapper: {
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+
+	left: {
+		height: '300px',
+		width: '30%',
+		display: 'flex',
+		justifyContent: 'right',
+		alignItems: 'center',
+	},
+	leftImage: {
+		height: '150px',
+		width: '150px',
+		backgroundSize: 'cover',
+		backgroundImage: `url(${leftImage})`,
+		color: 'red'
+	},
+
+	right: {
+		height: '300px',
+		width: '30%',
+		display: 'flex',
+		justifyContent: 'left',
+		alignItems: 'center',
+	},
+	rightImage: {
+		height: '150px',
+		width: '150px',
+		backgroundSize: 'cover',
+		backgroundImage: `url(${rightImage})`,
+		color: 'red'
+	},
+
 	container: {
 		height: '300px',
-		width: '100%',
+		width: '40%',
 		display: 'flex',
 		justifyContent: 'center',
 		alignContent: 'center',
@@ -39,20 +77,28 @@ const Banner: React.FC<{ title: string; subtitle: string }> = ({
 }) => {
 	const classes = useStyles();
 	return (
-		<div className={classes.container}>
-			<div className={classes.item}>
-				<Typography variant="h1" className={classes.itemTitle}>
-					{title}
-				</Typography>
+		<div className={classes.wrapper}>
+			<div className={classes.left}>
+				<div className={classes.leftImage}></div>
 			</div>
-			<div className={classes.item}>
-				<Typography
-					variant="body1"
-					className={classes.itemSubTitle}
-					style={{ margin: 'auto' }}
-				>
-					{subtitle}
-				</Typography>
+			<div className={classes.container}>
+				<div className={classes.item}>
+					<Typography variant="h1" className={classes.itemTitle}>
+						{title}
+					</Typography>
+				</div>
+				<div className={classes.item}>
+					<Typography
+						variant="body1"
+						className={classes.itemSubTitle}
+						style={{ margin: 'auto' }}
+					>
+						{subtitle}
+					</Typography>
+				</div>
+			</div>
+			<div className={classes.right}>
+				<div className={classes.rightImage}></div>
 			</div>
 		</div>
 	);

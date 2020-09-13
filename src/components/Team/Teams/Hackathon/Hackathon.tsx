@@ -14,7 +14,9 @@ const useStyles = makeStyles({
 		width: '100%',
 		padding: '30px',
 		boxSizing: 'border-box',
-		borderTop: '2px solid #6fc38f'
+		borderTop: '2px solid rgb(242, 242, 242)',
+		display: 'flex',
+		flexDirection: 'column'
 	}
 });
 
